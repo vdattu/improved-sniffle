@@ -55,8 +55,8 @@ services:
 
   mysql:
     container_name: flask_mysql
-    # let's grab from mysql 5.7 image
-    image: mysql:5.7
+    # let's grab from mysql 
+    image: mysql:debian
     volumes:
         # pass volume named mysql-data to mysql container
       - mysql-data:/var/lib/mysql
