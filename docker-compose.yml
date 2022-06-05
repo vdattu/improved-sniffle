@@ -56,7 +56,7 @@ services:
   mysql:
     container_name: flask_mysql
     # let's grab from mysql 
-    image: hypriot/rpi-mysql
+    image: arm64v8/mysql:8-oracle
     volumes:
         # pass volume named mysql-data to mysql container
       - mysql-data:/var/lib/mysql
