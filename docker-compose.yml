@@ -76,7 +76,7 @@ services:
   phpmyadmin:
     depends_on:
       - mysql
-    image: phpmyadmin/phpmyadmin:latest
+    image: arm64v8/phpmyadmin:latest
     container_name: flask_phpmyadmin
     restart: unless-stopped
     labels:
