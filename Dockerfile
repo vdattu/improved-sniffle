@@ -9,5 +9,4 @@ RUN pip install PyMySQL
 COPY app/requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 COPY app /app
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]
